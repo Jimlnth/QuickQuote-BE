@@ -1,0 +1,20 @@
+{
+  "name": "qover",
+  "version": "1.0.0",
+  "description": "qover technical test",
+  "author": "Jimmy Lanthin",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "4.5.0"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.0"
+  }
+}

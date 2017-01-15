@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var mongodbUri = 'mongodb://localhost:27017';
 mongoose.connect(mongodbUri, { server: {auto_reconnect: true } });
 require('./routes/user')(app);
+require('./routes/quickQuote')(app);
 
 app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'), function() {
