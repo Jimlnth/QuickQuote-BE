@@ -28,5 +28,9 @@ var quickQuoteSchema = new mongoose.Schema({
     }
 });
 
+quickQuoteSchema.methods.sendEmail = function() {
+    //setup smtp and send email to populated user
+}
+
 var quickQuote = mongoose.model('quickQuote', quickQuoteSchema);
 module.exports = quickQuote;

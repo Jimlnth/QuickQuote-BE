@@ -8,7 +8,12 @@ module.exports = function(app) {
 			newQuickQuote.save(function(err) {
 				if (err) return res.json({error: err});
 
-				res.json(newQuickQuote);
+				quickQuote.populate(newQuickQuote, { path: 'user'}, function(err, newQuickQuote) {
+					if (err) return res.json({error: err});
+
+					newQuickQuote.sendEmail();
+					res.json(newQuickQuote);
+				});
 			});
 		})
 }
